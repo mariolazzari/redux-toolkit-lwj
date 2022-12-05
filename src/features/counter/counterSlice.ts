@@ -1,13 +1,16 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
+// initial state interface
 interface CounterState {
   value: number;
 }
 
+// initial state
 const initialState: CounterState = {
   value: 0,
 };
 
+// slice
 export const counterSlice = createSlice({
   name: "counter",
   initialState,
@@ -28,6 +31,8 @@ export const counterSlice = createSlice({
   },
 });
 
+// action creators
 export const { increment, decrement, incrementByAmount } = counterSlice.actions;
 
+// reducer
 export default counterSlice.reducer;
